@@ -24,7 +24,7 @@ Route::post('updatepost/{id}', [\App\Http\Controllers\PostsController::class, 'u
 Route::get('/livesearch', [\App\Http\Controllers\PostsController::class, 'searching']);
 Route::get('/searchdata/{id}', [\App\Http\Controllers\PostsController::class, 'searchdata']);
 
-
+Route::middleware('auth:api')->group(function () {
     Route::get('me', [PassportAuthController::class, 'me'])->name('auth.me');
     Route::post('logout', [PassportAuthController::class, 'logout'])->name('auth.logout');
-
+});
