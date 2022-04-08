@@ -40,7 +40,7 @@ class PostsController extends Controller
     {
 
 
-        $posts = Post::latest()->with('files')->get();
+        $posts = Post::paginate(10)->with('files')->get();
         return response()->json(['posts' => $posts]);
     }
 
