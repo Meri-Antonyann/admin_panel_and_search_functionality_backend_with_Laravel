@@ -42,7 +42,7 @@ class PostsController extends Controller
 
         $posts = Post::latest()->with('files')->get();
 //        return response()->json(['posts' => $posts]);
-        return response()->json( $posts);
+        return response()->json(['posts' => $posts]);
     }
 
     public function showpost($id){
