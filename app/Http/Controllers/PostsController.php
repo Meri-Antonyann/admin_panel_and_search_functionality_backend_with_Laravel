@@ -41,7 +41,8 @@ class PostsController extends Controller
 
 
         $posts = Post::latest()->with('files')->paginate(10);
-        return response()->json(['posts' => $posts]);
+//        return response()->json(['posts' => $posts]);
+        return response()->json( $posts);
     }
 
     public function showpost($id){
