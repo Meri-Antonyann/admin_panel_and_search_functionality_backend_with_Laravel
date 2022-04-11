@@ -40,7 +40,7 @@ class PostsController extends Controller
     {
 
 
-        $posts = Post::paginate(5)->with('files');
+        $posts = Post::paginate(5);
 //        return response()->json(['posts' => $posts]);
         return response()->json(['posts' => $posts]);
     }
