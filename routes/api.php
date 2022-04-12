@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
  Route::post('login', [PassportAuthController::class, 'login'])->name('auth.login');
  Route::post('savepost', [\App\Http\Controllers\PostsController::class, 'index']);
-Route::get('post/{page}', [\App\Http\Controllers\PostsController::class, 'getposts']);
+Route::get('post/', [\App\Http\Controllers\PostsController::class, 'getposts']);
 Route::post('postdel/{id}', [\App\Http\Controllers\PostsController::class, 'destroy']);
 Route::get('showpost/{id}', [\App\Http\Controllers\PostsController::class, 'showpost']);
 Route::post('filedelete/{id}', [\App\Http\Controllers\PostsController::class, 'destroyfile']);
