@@ -40,7 +40,7 @@ class PostsController extends Controller
     {
 
 
-        $posts = Post::with('files')->latest()->get();
+        $posts = Post::with('files')->get();
 //        return response()->json(['posts' => $posts]);
         return response()->json(['posts' => $posts]);
     }
